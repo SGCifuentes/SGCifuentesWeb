@@ -6,7 +6,7 @@ interface NavProps {
 }
 const Nav = ({ selectedSection, setSelectedSection }: NavProps) => {
     return (
-        <div className='mt-10 flex flex-col'>
+        <div className='mt-10 lg:flex flex-col hidden'>
             <Link
                 href='#about'
                 className={`${selectedSection === 'about' ? 'underline' : ''} ${

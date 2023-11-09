@@ -19,9 +19,9 @@ export default function Home() {
 
     const currentCompany = 'Globant';
     return (
-        <div className='flex h-screen flex-col bg-gradient-to-br from-blue-800 to-gray-700 lg:flex-row lg:justify-center'>
+        <div className='flex min-h-screen flex-col bg-gradient-to-br from-blue-800 to-gray-700 lg:flex-row lg:justify-center'>
             <div className='flex flex-col justify-between p-8 lg:mx-auto lg:w-1/2'>
-                <div className='ml-10'>
+                <div className='lg:ml-10'>
                     <div className='space-y-3'>
                         <div>
                             <p className='text-cyan-300'>Hi!, i`m</p>
@@ -32,19 +32,19 @@ export default function Home() {
                         <h2 className='text-md font-bold text-slate-100'>
                             Web UI Developer at {currentCompany}
                         </h2>
-                        <p className='text-sm font-light text-slate-200'>
+                        <p className='text-md font-light text-slate-200'>
                             I specialize in crafting web solutions that are not
                             only intuitive and fast but also deliver exceptional
                             user experiences.
                         </p>
                     </div>
-
                     <Nav
                         selectedSection={selectedSection}
                         setSelectedSection={setSelectedSection}
                     />
                 </div>
-                <div className='underline- flex w-fit space-x-3'>
+
+                <div className='underline- mt-4 flex w-fit space-x-3'>
                     <Link
                         href={'https://github.com/SGCifuentes'}
                         target='__blank'
@@ -68,22 +68,41 @@ export default function Home() {
                     </Link>
                 </div>
             </div>
+
             <div className='flex-1 p-8 lg:overflow-y-auto'>
                 <div id='about'>
-                    <p>About Me</p>
-                    <div>
-                        <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing
-                            elit. Enim aliquid amet modi aut laborum, qui eius
-                            incidunt nesciunt et ullam eos nulla excepturi
-                            repellendus dolorum velit reprehenderit similique,
-                            ex illum.
+                    <h6 className='mb-2 text-lg font-bold'>ABOUT</h6>
+                    <div className='text-md'>
+                        <p className='mb-2'>
+                            Desde el 2021, comencé mi travesía en el mundo del
+                            desarrollo web, siempre enfocándome en React y sus
+                            derivados, como Next.js. Esto ha sido el lienzo para
+                            expresar mi pasión y dedicación inquebrantable en la
+                            creación de interfaces innovadoras, accesibles e
+                            intuitivas.
                         </p>
-                        <Image alt='Sebastian Gonzalez' src={''} />
+                        <p className='mb-2'>
+                            Mi compromiso siempre está orientado a ofrecer la
+                            mejor experiencia de usuario, ajustando diseños para
+                            garantizar una interacción fluida y rápida.
+                        </p>
+                        <p className='mb-2'>
+                            Además de mi cargo en Globant como Web UI, he tenido
+                            la oportunidad de desempeñar el papel de mentor para
+                            estudiantes de ingeniería que buscan adentrarse en
+                            el mundo del desarrollo frontend. Comparto consejos
+                            que me fueron útiles, brindo retroalimentación
+                            constante sobre su progreso y ofrezco apoyo para que
+                            continúen aprendiendo y alcancen su primera
+                            experiencia laboral. Compartir conocimientos y
+                            ayudar a otros ha sido otra de mis pasiones;
+                            motivándome a seguir aprendiendo y creciendo día a
+                            día.
+                        </p>
                     </div>
                 </div>
 
-                <div id='experience'>
+                <div id='experience' className='mt-8'>
                     <p>Where I’ve Worked</p>
                 </div>
 
