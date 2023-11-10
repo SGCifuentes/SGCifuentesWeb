@@ -1,15 +1,13 @@
-import Image from 'next/image';
+import Head from 'next/head';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import {
     FiExternalLink,
     FiGithub,
-    FiLink,
     FiLinkedin,
     FiTwitter
 } from 'react-icons/fi';
 import Nav from '../components/Nav';
-import Head from 'next/head';
 
 export default function Home() {
     const [selectedSection, setSelectedSection] = useState('about');
@@ -58,6 +56,7 @@ export default function Home() {
 
                     <div className='underline- mt-4 flex w-fit space-x-3'>
                         <Link
+                            aria-label='Go to my personal Github page'
                             href={'https://github.com/SGCifuentes'}
                             target='__blank'
                             className='rounded-full bg-gray-800 p-2'
@@ -65,6 +64,7 @@ export default function Home() {
                             <FiGithub fill='white' className='mt-0.5' />
                         </Link>
                         <Link
+                            aria-label='See my profile on Twitter'
                             href={'https://twitter.com/SGCifuentes_'}
                             target='__blank'
                             className='rounded-full bg-gray-800 p-2'
@@ -72,6 +72,7 @@ export default function Home() {
                             <FiTwitter fill='white' className='mt-0.5' />
                         </Link>
                         <Link
+                            aria-label='Read and see more about me in my linkedin profile page'
                             href={'https://www.linkedin.com/in/sgcifuentes/'}
                             target='__blank'
                             className='rounded-full bg-gray-800 p-2'
@@ -83,9 +84,9 @@ export default function Home() {
 
                 <main className='flex-1 p-8 lg:overflow-y-auto'>
                     <div id='about'>
-                        <h6 className='mb-2 text-lg font-bold text-slate-100'>
-                            ABOUT
-                        </h6>
+                        <h3 className='mb-2 text-lg font-bold text-slate-100'>
+                            About
+                        </h3>
                         <div className='text-md text-slate-200'>
                             <p className='mb-2'>
                                 Desde el 2021, comencé mi travesía en el mundo
@@ -118,16 +119,19 @@ export default function Home() {
                     </div>
 
                     <div id='experience' className='mt-8 text-slate-300'>
-                        <h6 className='mb-2 text-lg font-bold text-slate-100'>
+                        <h3 className='mb-2 text-lg font-bold text-slate-100'>
                             Experience
-                        </h6>
+                        </h3>
 
                         <ul className='list-none space-y-4'>
                             <li>
                                 <span>2022 - Present</span>
                                 <p>
                                     Web UI Developer -{' '}
-                                    <a href='https://www.globant.com/'>
+                                    <a
+                                        href='https://www.globant.com/'
+                                        aria-label='See my current work page'
+                                    >
                                         Globant <FiExternalLink />
                                     </a>
                                 </p>
@@ -157,9 +161,9 @@ export default function Home() {
                     </div>
 
                     <div id='projects' className='mt-8 text-slate-300'>
-                        <h6 className='mb-2 text-lg font-bold text-slate-100'>
+                        <h3 className='mb-2 text-lg font-bold text-slate-100'>
                             Projects
-                        </h6>
+                        </h3>
                         <ul className='list-none space-y-4'>
                             <li className='list-item'>
                                 <b>Weather app</b>
