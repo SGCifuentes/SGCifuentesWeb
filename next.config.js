@@ -3,8 +3,8 @@ const nextConfig = {
     swcMinify: true
 };
 
-module.exports = withSitemap({
+module.exports = {
     ...nextConfig,
     siteUrl: 'https://www.SGCifuentes.com.co',
     generateRobotsTxt: true
-});
+};
