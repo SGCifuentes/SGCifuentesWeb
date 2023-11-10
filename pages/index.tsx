@@ -129,8 +129,9 @@ export default function Home() {
                                 <p>
                                     Web UI Developer -{' '}
                                     <a
+                                        role='link'
                                         href='https://www.globant.com/'
-                                        aria-label='See my current work page'
+                                        aria-label='See Globant page'
                                     >
                                         Globant <FiExternalLink />
                                     </a>
